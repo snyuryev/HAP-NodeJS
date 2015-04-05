@@ -1,8 +1,23 @@
 // HomeKit types required
 var types = require("./types.js")
 var exports = module.exports = {};
+var app = require("../app.js");
 
-var execute = function(accessory,characteristic,value){ console.log("executed accessory: " + accessory + ", and characteristic: " + characteristic + ", with value: " +  value + "."); }
+//var execute = function(accessory,characteristic,value){ console.log("executed accessory: " + accessory + ", and characteristic: " + characteristic + ", with value: " +  value + "."); }
+
+var execute = function(accessory,characteristic,value){
+	console.log("executed accessory: " + accessory + ", and characteristic: " + characteristic + ", with value: " +  value + ".");
+
+//	executed accessory: Test Accessory 1, and characteristic: light service, with value: true.
+
+	if(value){
+		app.turnOn();
+	}
+	else{
+		app.turnOff();
+	}
+}
+
 
 exports.accessory = {
   displayName: "Light 1",
