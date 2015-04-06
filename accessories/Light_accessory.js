@@ -1,7 +1,9 @@
+// mraa
+var app = require("../app.js");
+
 // HomeKit types required
 var types = require("./types.js")
 var exports = module.exports = {};
-var app = require("../app.js");
 
 //var execute = function(accessory,characteristic,value){ console.log("executed accessory: " + accessory + ", and characteristic: " + characteristic + ", with value: " +  value + "."); }
 
